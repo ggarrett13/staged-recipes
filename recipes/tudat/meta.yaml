@@ -49,7 +49,6 @@ outputs:
         - tudat-sofa
         #        - nlohmann_json
         - eigen
-        - nlopt
 
 
       host:
@@ -61,7 +60,7 @@ outputs:
         - tudat-sofa
         #        - nlohmann_json
         - eigen
-        - nlopt
+
       run:
         # Packages required to run the package. These are the dependencies
         # that are installed automatically whenever the package is installed.
