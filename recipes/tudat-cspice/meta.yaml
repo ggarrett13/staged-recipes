@@ -1,0 +1,22 @@
+{% set name = "tudat-cspice" %}
+{% set version = "1.0.0" %}
+
+package:
+  name: "{{ name }}"
+  version: "{{ version }}"
+
+source:
+    git_url: https://github.com/ggarrett13/cspice.git
+    git_rev: dae2fc1c85698e3d453f5ce4eeddce3b66971069
+
+requirements:
+    build:
+        - cmake
+        - {{ compiler('c') }}              # [not win]
+        - vs2017_{{ target_platform  }}    # [win]
+
+about:
+  home: https://github.com/ggarrett13/cspice
+  license: BSD
+  license_family: BSD
+  summary: Mirror of SPICE Toolbox sourcecode with additional CMake files for building along the tudatBundle.
